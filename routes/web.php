@@ -21,3 +21,11 @@ Route::get('/main',function(){
 Route::get('/pomodoro',function(){
     return view("pomodoro");
 });
+
+
+//カウントダウンテスト用のルート
+Route::get('/count',function(){
+    return view("count_timer");
+});
+
+
