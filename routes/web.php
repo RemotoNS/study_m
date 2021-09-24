@@ -12,4 +12,8 @@
 */
 
 
-Route::get('/home', 'home_counter_Controller@getIndex');  // 表示
+Route::get('/home', 'home_counter_Controller@getIndex');
+
+Route::get('/main',function(){
+    return view("main");
+});
