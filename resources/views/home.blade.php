@@ -1,6 +1,6 @@
 @extends("layouts.app")
 
-@section("title","muscle_study")
+@section("title","muscle_study_home")
 
 @section("content")
     <h1>マッスル★スタディ</h1>
