@@ -17,3 +17,7 @@ Route::get('/home', 'home_counter_Controller@getIndex');
 Route::get('/main',function(){
     return view("main");
 });
+
+Route::get('/pomodoro',function(){
+    return view("pomodoro");
+});
