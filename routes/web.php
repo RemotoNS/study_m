@@ -18,11 +18,6 @@ Route::get('/main',function(){
     return view("main");
 });
 
-Route::get('/pomodoro',function(){
-    return view("pomodoro");
-});
-
-
 //カウントダウンテスト用のルート
 Route::get('/count', 'pomo_counter_Controller@get_count');
 
