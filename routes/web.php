@@ -21,4 +21,9 @@ Route::get('/main',function(){
 //カウントダウンテスト用のルート
 Route::get('/count', 'pomo_counter_Controller@get_count');
 
+Route::get('/pomo_break',function(){
+    return view("pomo_break");
+});
+
+
 
