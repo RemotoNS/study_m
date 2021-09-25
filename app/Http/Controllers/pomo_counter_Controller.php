@@ -9,18 +9,13 @@ class pomo_counter_Controller extends Controller
         public function get_count()
     {
 
-        if(session()->has('count')){
-            // あり
-            $count = session('count');
+        if (isset($_COOKIE["count"])){
+            $count = $_COOKIE["count"] + 1;
         }else{
-            // なし
-            $count = 0;
+            $count = 1;
         }
-
-        // カウントを１つまわす
-        $count++;
-        // 値を保存
-        session(['count' => "$count"]);
+    
+        $flag = setcookie("count", $count, time() + 30);
 
         return view("count_timer",compact('count'));
     }
