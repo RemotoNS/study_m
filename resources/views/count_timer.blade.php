@@ -5,27 +5,27 @@
         <title>One Minute Timer</title>
         <script type="text/javascript">
             var timer_ID;                               //【タイマーID】
-            var time = 60;                              // timeの初期化
-
+            var time = 5;                              // timeの初期化
             function minusTime() {
                 time--;                                 // timeの更新
                 dispTime();                             // timeの表示	
                 if (time==0) {
-                    clearInterval(timer_ID);            //【タイマーの消去】
+                    clearInterval(timer_ID);
+                    var sampleArea = document.getElementById("sampleArea");
+                    sampleArea.innerHTML = "ポモドーロタイマーが終了したぜよ😎";          //【タイマーの消去】
                 }
             }
-			
             function dispTime() {
                 document.getElementsByTagName("output")[0].innerHTML = time;
             }
-
             window.onload = function() {
-                dispTime();                                     // timeの表示
+                dispTime();                                      // timeの表示
                 timer_ID = setInterval("minusTime()", 1000);    //【タイマーの設定】
             }
         </script>
     </head>
     <body>
-        <output></output>
+        <p>残り<output></output>秒</p>
+        <div id="sampleArea"></div>
     </body>
 </html>
