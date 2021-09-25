@@ -24,8 +24,6 @@ Route::get('/pomodoro',function(){
 
 
 //カウントダウンテスト用のルート
-Route::get('/count',function(){
-    return view("count_timer");
-});
+Route::get('/count', 'pomo_counter_Controller@get_count');
 
 

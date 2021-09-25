@@ -12,7 +12,7 @@
                 if (time==0) {
                     clearInterval(timer_ID);
                     var sampleArea = document.getElementById("sampleArea");
-                    sampleArea.innerHTML = "ポモドーロタイマーが終了したぜよ😎";          //【タイマーの消去】
+                    sampleArea.innerHTML = "お疲れ様❗️下の【休憩ボタン】を押してコーヒーでも飲んできてね❤️";          //【タイマーの消去】
                 }
             }
             function dispTime() {
@@ -25,7 +25,12 @@
         </script>
     </head>
     <body>
+
+        <p>ポモドーロ{{$count}}回目❗️</p>
         <p>残り<output></output>秒</p>
         <div id="sampleArea"></div>
+        
+    
+    
     </body>
 </html>
