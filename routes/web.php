@@ -25,5 +25,4 @@ Route::get('/pomo_break',function(){
     return view("pomo_break");
 });
 
-
-
+Route::post('/ranking', 'RankingController@getcount');
