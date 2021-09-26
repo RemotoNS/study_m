@@ -29,18 +29,16 @@
     <body>
         <div class="container">
             <p>ポモドーロ{{$count}}回目❗️</p>
-
-            <form action="ranking" method="post">
-                <input type="name" name="count" value="<?= $count ?>">
-                <input type="hidden" name="count" value="<?= $count ?>">
-            </form>
-
             <p>残り<output></output>秒</p>
             <div id="sampleArea"></div>
             <p><a href="/pomo_break" class="btn btn-primary btn-sm">BREAK</a></p>
-            <p><a href="/ranking" class="btn btn-primary btn-sm">終了</a></p>
    
-
+            
+            <form action="ranking" method="post">
+                <input type="name" name="count" value="<?= $count ?>">
+                <input type="hidden" name="count" value="<?= $count ?>">
+                <input type="submit" value="終了">
+            </form>
 
         </div>    
         
