@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="/css/sticky-footer.css" rel="stylesheet" media="screen">
-        <title>pomodoro_tecnic</title>
+            <title>pomodoro_tecnic</title>
             <script type="text/javascript">
                 var timer_ID;                               //【タイマーID】
                 var time = 5;                              // timeの初期化
@@ -14,7 +14,7 @@
                     if (time==0) {
                         clearInterval(timer_ID);
                         var sampleArea = document.getElementById("sampleArea");
-                        sampleArea.innerHTML = "お疲れ様❗️下の【BREAKボタン】を押して５分間休憩してね❤️";          //【タイマーの消去】
+                        sampleArea.innerHTML = "勉強の時間だ❗️責務を全うせよ🔥";          //【タイマーの消去】
                     }
                 }
                 function dispTime() {
