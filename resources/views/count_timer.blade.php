@@ -14,7 +14,7 @@
                     if (time==0) {
                         clearInterval(timer_ID);
                         var sampleArea = document.getElementById("sampleArea");
-                        sampleArea.innerHTML = "勉強の時間だ❗️責務を全うせよ🔥";          //【タイマーの消去】
+                        sampleArea.innerHTML = "勉強お疲れ様❤️【BREAK】ボタンを押して５分間休憩してね。";          //【タイマーの消去】
                     }
                 }
                 function dispTime() {

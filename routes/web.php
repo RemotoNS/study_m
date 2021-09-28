@@ -26,3 +26,5 @@ Route::get('/pomo_break',function(){
 });
 
 Route::post('/ranking', 'RankingController@getcount');
+
+Route::post('/store', 'RankingController@store');
