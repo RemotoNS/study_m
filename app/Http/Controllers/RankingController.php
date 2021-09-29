@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Models\Rank;
 
+use Illuminate\Support\Facades\DB;
+
 class RankingController extends Controller
 {
     
@@ -26,12 +28,19 @@ class RankingController extends Controller
 
         $rank -> name = $request->input("name");
         $rank -> count = $request->input("count");
-
         $rank -> save();
-
-        return redirect('/home');
-
-
+        return redirect('/rank_list');
     }
+
+    public function rank_rsort()
+    {
+        $challengers = DB::select("SELECT name,count FROM ranks ORDER BY count DESC limit 3");
+
+        $si = 1;
+
+        return view("rank_list",["challengers" => $challengers , "si" => $si]);
+ 
+    }
+
 }
 
