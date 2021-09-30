@@ -19,13 +19,13 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="#">マッスル★スタディ</a>
+                            <a class="navbar-brand" href="/main">マッスル★スタディ</a>
                         </div>
                         <div id="navbar" class="collapse navbar-collapse">
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="#">メイン</a></li>
-                                <li><a href="#about">鉄の掟</a></li>
-                                <li><a href="#contact">脳筋ランキング</a></li>
+                                <li class="active"><a href="">メイン</a></li>
+                                <li><a href="/index">鉄の掟</a></li>
+                                <li><a href="/rank_list">脳筋ランキング</a></li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
                                     <ul class="dropdown-menu" role="menu">
