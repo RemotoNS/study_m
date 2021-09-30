@@ -12,7 +12,7 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>記事数</th>
+                <th>No.</th>
                 <th>タイトル</th>
                 <th>投稿者名</th>
             </tr>
@@ -21,7 +21,7 @@
         @foreach ($articles_meal as $article_meal)
             <tr>
                 <td>{{ $a++ }}</td> 
-                <td><a href="show{$id}.blead.php">{{ $article_meal -> title }}</a></td>
+                <td><a href="/show/{{$article_meal -> id }}">{{ $article_meal -> title }}</a></td>
                 <td>{{ $article_meal -> user_id }}</td> 
             </tr>   
         @endforeach
@@ -32,7 +32,7 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>記事数</th>
+                <th>No.</th>
                 <th>タイトル</th>
                 <th>投稿者名</th>
             </tr>
@@ -41,7 +41,7 @@
         @foreach ($articles_exercise as $article_exercise)
             <tr>
                 <td>{{ $b++ }}</td> 
-                <td><a href="show{$id}.blead.php">{{ $article_exercise -> title }}</a></td>
+                <td><a href="/show/{{$article_exercise -> id }}">{{ $article_exercise -> title }}</a></td>
                 <td>{{ $article_exercise -> user_id }}</td> 
             </tr>   
         @endforeach
@@ -52,17 +52,17 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>記事数</th>
+                <th>No.</th>
                 <th>タイトル</th>
                 <th>投稿者名</th>
             </tr>
         </thead>
         <tbody>
-        @foreach ($articles_sleep as $articles_sleep)
+        @foreach ($articles_sleep as $article_sleep)
             <tr>
                 <td>{{ $c++ }}</td> 
-                <td><a href="show{$id}.blead.php">{{ $articles_sleep -> title }}</a></td>
-                <td>{{ $articles_sleep -> user_id }}</td> 
+                <td><a href="/show/{{$article_sleep -> id }}">{{ $article_sleep -> title }}</a></td>
+                <td>{{ $article_sleep -> user_id }}</td> 
             </tr>   
         @endforeach
         </tbody>

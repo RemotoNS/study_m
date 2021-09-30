@@ -26,9 +26,9 @@ class index_Controller extends Controller
 
     public function articleList()
     {
-        $articles_meal = DB::select("SELECT title,user_id FROM articles WHERE category_id = 1");
-        $articles_exercise = DB::select("SELECT title,user_id FROM articles WHERE category_id = 2");
-        $articles_sleep = DB::select("SELECT title,user_id FROM articles WHERE category_id = 3");
+        $articles_meal = DB::select("SELECT id,title,user_id FROM articles WHERE category_id = 1");
+        $articles_exercise = DB::select("SELECT id,title,user_id FROM articles WHERE category_id = 2");
+        $articles_sleep = DB::select("SELECT id,title,user_id FROM articles WHERE category_id = 3");
 
         $a = 1;
         $b = 1;
@@ -44,9 +44,9 @@ class index_Controller extends Controller
             ]);
     }
 
-    public function show()
+    public function show($id)
     {
-        $article = Article::find(2);
+        $article = Article::find($id);
         return view("show",["article" => $article]);
     }
 
