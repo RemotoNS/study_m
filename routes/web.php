@@ -38,3 +38,5 @@ Route::get('/new',function(){
 Route::post('/getRuleArticle', 'index_Controller@getRuleArticle');
 
 Route::get('/index', 'index_Controller@articleList');
+
+Route::get('/show', 'index_Controller@show');

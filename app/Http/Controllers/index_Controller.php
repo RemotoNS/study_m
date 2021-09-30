@@ -42,7 +42,12 @@ class index_Controller extends Controller
              "b" => $b,
              "c" => $c
             ]);
+    }
 
+    public function show()
+    {
+        $article = Article::find(2);
+        return view("show",["article" => $article]);
     }
 
 }
