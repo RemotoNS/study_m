@@ -23,7 +23,6 @@
                         </div>
                         <div id="navbar" class="collapse navbar-collapse">
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="">メイン</a></li>
                                 <li><a href="/index">鉄の掟</a></li>
                                 <li><a href="/rank_list">脳筋ランキング</a></li>
                                 <li class="dropdown">

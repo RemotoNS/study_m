@@ -40,3 +40,7 @@ Route::post('/getRuleArticle', 'index_Controller@getRuleArticle');
 Route::get('/index', 'index_Controller@articleList');
 
 Route::get("/show/{id}", 'index_Controller@show');
+
+Route::get("/edit/{id}", 'index_Controller@edit_pre');
+
+Route::post("/edit_post", 'index_Controller@edit_post');

@@ -50,4 +50,23 @@ class index_Controller extends Controller
         return view("show",["article" => $article]);
     }
 
+    public function edit_pre($id)
+    {
+        $article = Article::find($id);
+        return view("edit",["article" => $article]);
+    }
+
+    public function edit_post(Request $request)
+    {
+        $article = Article::find($request->input("id"));
+
+        $article -> category_id = $request->input("category_id");
+        $article -> title = $request->input("title");
+        $article -> content = $request->input("content");
+        //ユーザーID（テスト用）
+        $article -> user_id = $request->input("user_id");
+        $article -> save();
+        return redirect('/index');
+    }
+
 }
