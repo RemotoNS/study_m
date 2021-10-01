@@ -69,4 +69,11 @@ class index_Controller extends Controller
         return redirect('/index');
     }
 
+    public function destroy($id)
+    {
+        $article = Article::find($id);
+        $article -> delete();
+        return redirect('/index');;
+    }
+
 }

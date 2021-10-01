@@ -44,3 +44,5 @@ Route::get("/show/{id}", 'index_Controller@show');
 Route::get("/edit/{id}", 'index_Controller@edit_pre');
 
 Route::post("/edit_post", 'index_Controller@edit_post');
+
+Route::get("/destroy/{id}", 'index_Controller@destroy');
