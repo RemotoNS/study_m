@@ -21,6 +21,6 @@ class home_counter_Controller extends Controller
     // 値を保存
     session(['count' => "$count"]);
 
-    return view("home",compact('count'));
+    return view("top",compact('count'));
 }
 }

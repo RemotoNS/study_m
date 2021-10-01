@@ -1,4 +1,4 @@
-@extends("layouts.app")
+@extends("layouts.sub_app")
 
 @section("title","ranking")
 
