@@ -48,7 +48,6 @@ Route::post("/edit_post", 'index_Controller@edit_post');
 Route::get("/destroy/{id}", 'index_Controller@destroy');
 
 
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

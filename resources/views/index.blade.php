@@ -1,4 +1,4 @@
-@extends("layouts.max_app")
+@extends("layouts.test_max_app")
 
 @section("title","muscle_study-main")
 

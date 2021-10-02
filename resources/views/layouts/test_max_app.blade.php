@@ -25,23 +25,40 @@
                             <ul class="nav navbar-nav">
                                 <li><a href="/index">鉄の掟</a></li>
                                 <li><a href="/rank_list">脳筋ランキング</a></li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li class="divider"></li>
-                                        <li class="dropdown-header">Nav header</li>
-                                        <li><a href="#">Separated link</a></li>
-                                        <li><a href="#">One more separated link</a></li>
-                                    </ul>
-                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav">
+                                @guest
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('login') }}">{{ __('ログイン') }}</a>
+                                    </li>
+                                    @if (Route::has('register'))
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ route('register') }}">{{ __('新規登録') }}</a>
+                                        </li>
+                                        @endif
+                                    @else
+                                    <li>
+                                        <a aria-haspopup="true" aria-expanded="false" v-pre>
+                                            {{ Auth::user()->name }}
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                                            {{ __('ログアウト') }}
+                                        </a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </li>
+                                @endguest
                             </ul>
                         </div><!--/.nav-collapse -->
                     </div>
                 </nav>
             </header>
+            <p><br><br><br></p>
 
             @yield("content")
 
