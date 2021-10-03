@@ -1,4 +1,4 @@
-@extends("layouts.test_max_app")
+@extends("layouts.max_app")
 
 @section('content')
 <div class="container">

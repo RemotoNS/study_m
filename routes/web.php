@@ -12,7 +12,7 @@
 */
 
 
-Route::get('/top', 'home_counter_Controller@getIndex');
+Route::get('/top', 'home_counter_Controller@set_count');
 
 Route::get('/main',function(){
     return view("main");
