@@ -18,7 +18,6 @@
     <p>タイトル；<input type="name" name="title" value="{{ $article -> title }}"></p>
     <p>内容；<input type="text" name="content" value="{{ $article -> content }}"></p>
     <input type="hidden" name="id" value="{{ $article -> id }}">
-    <p>ユーザーID（削除予定）；<input type="name" name="user_id"></p>
     <input type="submit" value="投稿する">
 </form>
 <a href="/index">戻る</a>

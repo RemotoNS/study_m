@@ -31,9 +31,7 @@ Route::post('/store', 'RankingController@store');
 
 Route::get('/rank_list', 'RankingController@rank_rsort');
 
-Route::get('/new',function(){
-    return view("new");
-});
+Route::get('/new', 'index_Controller@new');
 
 Route::post('/getRuleArticle', 'index_Controller@getRuleArticle');
 

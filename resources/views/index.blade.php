@@ -14,7 +14,6 @@
             <tr>
                 <th>No.</th>
                 <th>タイトル</th>
-                <th>投稿者名</th>
             </tr>
         </thead>
         <tbody>
@@ -22,7 +21,6 @@
             <tr>
                 <td>{{ $a++ }}</td> 
                 <td><a href="/show/{{$article_meal -> id }}">{{ $article_meal -> title }}</a></td>
-                <td>{{ $article_meal -> user_id }}</td> 
             </tr>   
         @endforeach
         </tbody>
@@ -34,7 +32,6 @@
             <tr>
                 <th>No.</th>
                 <th>タイトル</th>
-                <th>投稿者名</th>
             </tr>
         </thead>
         <tbody>
@@ -42,7 +39,6 @@
             <tr>
                 <td>{{ $b++ }}</td> 
                 <td><a href="/show/{{$article_exercise -> id }}">{{ $article_exercise -> title }}</a></td>
-                <td>{{ $article_exercise -> user_id }}</td> 
             </tr>   
         @endforeach
         </tbody>
@@ -54,7 +50,6 @@
             <tr>
                 <th>No.</th>
                 <th>タイトル</th>
-                <th>投稿者名</th>
             </tr>
         </thead>
         <tbody>
@@ -62,7 +57,6 @@
             <tr>
                 <td>{{ $c++ }}</td> 
                 <td><a href="/show/{{$article_sleep -> id }}">{{ $article_sleep -> title }}</a></td>
-                <td>{{ $article_sleep -> user_id }}</td> 
             </tr>   
         @endforeach
         </tbody>

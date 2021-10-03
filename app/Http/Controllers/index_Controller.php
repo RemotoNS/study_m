@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\DB;
 
 class index_Controller extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except(['articleList',"show"]);
+    }
+
 
     public function getRuleArticle(Request $request)
     {
@@ -18,8 +23,10 @@ class index_Controller extends Controller
         $article -> category_id = $request->input("category_id");
         $article -> title = $request->input("title");
         $article -> content = $request->input("content");
+        
+        $article->user_id = $request->user()->id;
         //ユーザーID（テスト用）
-        $article -> user_id = $request->input("user_id");
+        //$article -> user_id = $request->input("user_id");
         $article -> save();
         return redirect('/index');
     }
@@ -50,6 +57,11 @@ class index_Controller extends Controller
         return view("show",["article" => $article]);
     }
 
+    public function new()
+    {
+        return view("new");
+    }
+
     public function edit_pre($id)
     {
         $article = Article::find($id);
@@ -63,8 +75,9 @@ class index_Controller extends Controller
         $article -> category_id = $request->input("category_id");
         $article -> title = $request->input("title");
         $article -> content = $request->input("content");
+        $article->user_id = $request->user()->id;
         //ユーザーID（テスト用）
-        $article -> user_id = $request->input("user_id");
+        //$article -> user_id = $request->input("user_id");
         $article -> save();
         return redirect('/index');
     }

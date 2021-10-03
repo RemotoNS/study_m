@@ -17,9 +17,9 @@
 
     <p>タイトル；<input type="name" name="title"></p>
     <p>内容；<input type="text" name="content"></p>
-    <p>ユーザーID（削除予定）；<input type="name" name="user_id"></p>
+
     <input type="submit" value="投稿する">
 </form>
-<a href="#">戻る</a>
+<a href="/index">戻る</a>
 
 @endsection
