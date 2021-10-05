@@ -4,10 +4,6 @@
 
 @section("content")
 
-<p><br><br></p>
-<p><br><br></p>
-
-
 <p>タイトル；{{ $article -> title }}</p>
 <p>内容；{{ $article -> content }}</p>
 <p>投稿者名；{{ $article -> user -> name }}</p>
