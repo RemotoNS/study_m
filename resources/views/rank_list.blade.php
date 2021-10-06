@@ -15,15 +15,16 @@
     <tbody>
     @foreach ($challengers as $challenger)
         <tr>
-            <td>{{ $si++ }}</td>
-            <td>{{ $challenger -> name }}</td>
-            <td>{{ $challenger -> count }}</td> 
+            <td>第　{{ $si++ }}　位</td>
+            <td>{{ $challenger -> name }}　氏</td>
+            <td>{{ $challenger -> count }}　回</td> 
         </tr>   
         @endforeach
     </tbody>
 </table>
-
-<p><a href="/main" class="btn btn-primary btn-sm">スタート</a></p>
+<div class="d-flex align-items-center justify-content-center" style="height:100px;">
+    <p><a href="/main" class="btn btn-primary btn-sm">メイン画面へ戻る</a></p>
+</div>
 
 
 

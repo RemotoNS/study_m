@@ -69,9 +69,12 @@
             </body>
 
             <footer>
-                <p>マッスル★スタディ株式会社第３３代代表取締役社長；マッスル益男</p>
-                <p>３３歳独身、愛媛県出身</p>
-                <p>その他の情報はヒミツ❤️</p>
+                <div  class="bg-info d-flex align-items-center justify-content-center" style="height:100px;">
+                    <p>マッスル★スタディ株式会社第３３代代表取締役社長；マッスル益男
+                        <br>３３歳独身、愛媛県出身
+                        <br>その他の情報はヒミツ❤️
+                    </p>
+                </div>
             </footer>
             
         </div>
