@@ -19,6 +19,7 @@
                                     <option value="1">食事</option>
                                     <option value="2">運動</option>
                                     <option value="3">睡眠</option>
+                                    <option value="4">テスト</option>
                                 </select>
                             </label>
                         </div>

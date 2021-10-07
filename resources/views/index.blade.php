@@ -69,6 +69,23 @@
         @endforeach
         </tbody>
     </table>
+<h2>四；テスト</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>タイトル</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach ($articles_test as $article_test)
+            <tr>
+                <td>第　{{ $d++ }}　条</td> 
+                <td><a href="/show/{{$article_test -> id }}">{{ $article_test -> title }}</a></td>
+            </tr>   
+        @endforeach
+        </tbody>
+    </table>
     <div class="d-flex align-items-center justify-content-center" style="height:100px;">
         <p>キミが実践している【鉄の掟】はあるか？
             <br>もしあるのであれば、我々にぜひ教えて欲しい！

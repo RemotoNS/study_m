@@ -14,11 +14,13 @@
                     <form action="/edit_post" method="POST">
                         @csrf
                         <div class="col-md-7 col-form-label text-md-right">
-                            <label>ジャンルセレクト
+                            <label>ジャンルセレクト;
                                 <select name="category_id">
+                                    <option value="{{$article -> category_id}}">ジャンルは変更しない</option>
                                     <option value="1">食事</option>
                                     <option value="2">運動</option>
                                     <option value="3">睡眠</option>
+                                    <option value="4">テスト</option>
                                 </select>
                             </label>
                         </div>

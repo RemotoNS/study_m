@@ -36,18 +36,23 @@ class index_Controller extends Controller
         $articles_meal = DB::select("SELECT id,title,user_id FROM articles WHERE category_id = 1");
         $articles_exercise = DB::select("SELECT id,title,user_id FROM articles WHERE category_id = 2");
         $articles_sleep = DB::select("SELECT id,title,user_id FROM articles WHERE category_id = 3");
+        $articles_test = DB::select("SELECT id,title,user_id FROM articles WHERE category_id = 4");
 
         $a = 1;
         $b = 1;
         $c = 1;
+        $d = 1;
 
         return view("index",[
             "articles_meal" => $articles_meal ,
             "articles_exercise" => $articles_exercise ,
             "articles_sleep" => $articles_sleep ,
+            "articles_test" => $articles_test ,
+
              "a" => $a,
              "b" => $b,
-             "c" => $c
+             "c" => $c,
+             "d" => $d
             ]);
     }
 
